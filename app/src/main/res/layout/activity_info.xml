@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/info_img_bg"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="168dp"
+        android:background="@drawable/info_img_title"/>
+
+
+    <ScrollView
+        android:layout_width="688dp"
+        android:layout_height="432dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="168dp"
+        android:layout_marginTop="192dp"
+        android:id="@+id/scrl_info">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/info_img_text"/>
+
+    </ScrollView>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_close"
+        android:background="@drawable/common_btn_close"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="664dp"
+        />
+
+
+
+</RelativeLayout>
