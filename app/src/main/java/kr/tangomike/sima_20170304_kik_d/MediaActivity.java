@@ -9,6 +9,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.content.res.ResourcesCompat;
 import android.view.View;
 import android.view.WindowManager;
@@ -45,7 +46,7 @@ public class MediaActivity extends Activity implements Runnable{
     private SeekBar sbAudio;
 
 
-    private ImageView ivTitle;
+//    private ImageView ivTitle;
 
     private VideoView vv;
     private AudioManager am;
@@ -132,6 +133,10 @@ public class MediaActivity extends Activity implements Runnable{
         sbAudio.setOnSeekBarChangeListener(onSeekVolume);
         sbAudio.setThumb(ResourcesCompat.getDrawable(getResources(), R.drawable.media_btn_thumb_audio, null));
 
+        sbAudio.setProgress(7);
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, 7, 0);
+
+
 
         sbVideo = (SeekBar)findViewById(R.id.sb_video);
         sbVideo.setOnSeekBarChangeListener(onSeekVideo);
@@ -141,7 +146,7 @@ public class MediaActivity extends Activity implements Runnable{
 
         vv = (VideoView)findViewById(R.id.vv_media);
 
-        ivTitle = (ImageView)findViewById(R.id.iv_video_title);
+//        ivTitle = (ImageView)findViewById(R.id.iv_video_title);
         setVideo(1);
         vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -199,7 +204,7 @@ public class MediaActivity extends Activity implements Runnable{
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             if(fromUser) vv.seekTo(progress);
-            sbAudio.setProgress(progress);
+            sbVideo.setProgress(progress);
 //            nowTime.setText(getTimeString(progress));
         }
 
@@ -221,9 +226,11 @@ public class MediaActivity extends Activity implements Runnable{
     private void setVideo(int number){
         videoNumber = number;
 
-        ivTitle.setBackgroundResource(getResources().getIdentifier("media_img_title_" + number, "drawable", getPackageName()));
+//        ivTitle.setBackgroundResource(getResources().getIdentifier("media_img_title_" + number, "drawable", getPackageName()));
 
-        String path = "android.resource://" + getPackageName() + "/raw/media_mov_" + number;
+//        String path = "android.resource://" + getPackageName() + "/raw/media_mov_" + number;
+
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/video_d_" + number + ".mp4";
 
         if(vv.isPlaying()) vv.stopPlayback();
         vv.setVideoURI(Uri.parse(path));

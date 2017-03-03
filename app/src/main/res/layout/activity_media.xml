@@ -6,20 +6,11 @@
     android:background="@drawable/media_img_bg">
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/iv_video_title"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        />
-
-
 
     <VideoView
         android:layout_width="match_parent"
         android:layout_height="576dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="0dp"
         android:id="@+id/vv_media"
         />
 
@@ -34,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="678dp"
+        android:layout_marginTop="642dp"
         android:id="@+id/btn_close"/>
 
     <Button
@@ -43,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="309dp"
-        android:layout_marginTop="678dp"
+        android:layout_marginTop="642dp"
         android:id="@+id/btn_play_pause"
         android:background="@drawable/media_btn_pause"
         />
@@ -53,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="136dp"
-        android:layout_marginTop="678dp"
+        android:layout_marginTop="642dp"
         android:id="@+id/btn_video1"
         android:background="@drawable/media_btn_1_push"/>
 
@@ -61,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="206dp"
-        android:layout_marginTop="678dp"
+        android:layout_marginTop="642dp"
         android:id="@+id/btn_video2"
         android:background="@drawable/media_btn_video_2"/>
 
@@ -72,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="695dp"
+        android:layout_marginTop="659dp"
         android:layout_marginLeft="866dp"
         android:background="@drawable/media_img_audio"/>
 
@@ -81,7 +72,7 @@
         android:layout_width="429dp"
         android:layout_height="28dp"
         android:layout_marginLeft="389dp"
-        android:layout_marginTop="695dp"
+        android:layout_marginTop="659dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:id="@+id/sb_video"
@@ -91,7 +82,7 @@
         android:layout_width="79dp"
         android:layout_height="26dp"
         android:layout_marginLeft="912dp"
-        android:layout_marginTop="695dp"
+        android:layout_marginTop="659dp"
         android:id="@+id/sb_audio"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
