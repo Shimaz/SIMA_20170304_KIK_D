@@ -36,11 +36,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_close"
-        android:background="@drawable/common_btn_close"
+        android:background="@drawable/btn_home"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="664dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="690dp"
         />
 
 
